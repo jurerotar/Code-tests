@@ -1,0 +1,15 @@
+{
+    "name": "jure/code-tests",
+    "authors": [
+        {
+            "name": "Jure Rotar",
+            "email": "jrotar0@gmail.com"
+        }
+    ],
+    "require": {
+        "squizlabs/php_codesniffer": "*"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.1"
+    }
+}
