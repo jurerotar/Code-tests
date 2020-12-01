@@ -12,17 +12,21 @@ Given nums = [2, 7, 11, 15], target = 9,
 Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
  */
-class Solution {
+class Solution
+{
 
     /**
      * @param Integer[] $nums
      * @param Integer $target
      * @return Integer[]
      */
-    function twoSum($nums, $target) {
-        foreach($nums as $number) {
+    function twoSum($nums, $target)
+    {
+        foreach ($nums as $number)
+        {
             $remainder = $target - $number;
-            if(in_array($remainder, $nums) && $remainder !== $number) {
+            if (in_array($remainder, $nums) && $remainder !== $number)
+            {
                 return [array_search($number, $nums), array_search($remainder, $nums)];
             }
         }
@@ -31,11 +35,14 @@ class Solution {
          */
         $remainder = $target / 2;
         $arr = [];
-        foreach($nums as $index => $number) {
-            if($remainder === $number) {
+        foreach ($nums as $index => $number)
+        {
+            if ($remainder === $number)
+            {
                 $arr[] = $index;
             }
-            if(count($arr) === 2) {
+            if (count($arr) === 2)
+            {
                 return $arr;
             }
         }

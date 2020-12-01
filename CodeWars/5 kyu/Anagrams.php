@@ -16,9 +16,11 @@ anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']) => ['carer', '
 anagrams('laser', ['lazing', 'lazy',  'lacer']) => []
 */
 
-function anagrams(string $word, array $words): array {
+function anagrams(string $word, array $words): array
+{
     $word = count_chars($word);
-    return array_values(array_filter($words, function($element) use($word) {
+    return array_values(array_filter($words, function ($element) use ($word)
+    {
         return $word === count_chars($element);
     }));
 }
